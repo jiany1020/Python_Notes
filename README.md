@@ -1,4 +1,5 @@
 # Python_Notes
+## Interfaces
 Here is a simple example of how to use ABCs in Python:
 
 ```
@@ -16,4 +17,7 @@ class ConcreteClassExample(AbstractClassExample):
         return "I'm doing something!"
 ```
 
-In this example, AbstractClassExample is an abstract base class with an abstract method do_something. ConcreteClassExample is a subclass that implements the do_something method. You cannot create an instance of AbstractClassExample because it has abstract methods that are not implemented. Once do_something is implemented in a subclass, you can then create instances of that subclass.
+It's kind of restriction for those classes wirtten below, which is good for creating a library.
+In this example, AbstractClassExample is an abstract base class with an abstract method do_something. ConcreteClassExample is a subclass that implements the do_something method. **You cannot create an instance of AbstractClassExample because it has abstract methods that are not implemented**. Once do_something is implemented in a subclass, you can then create instances of that subclass.
+
+**ABC-Person-Student/Employee (Person class is a subset of ABC class)**
