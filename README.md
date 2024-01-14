@@ -40,3 +40,23 @@ for entity_id, group in grouped:
     print(f"Entity ID: {entity_id}")
     print(group, "\n")
 ```
+
+## Problems Curious about in PA#1
+
+**Q1 : why in this code a = 37?**
+```
+def _hash(self, key):
+        a = 37
+        m = self._capacity
+        hash_value = 0
+        for i in range(len(key)):
+            hash_value = (hash_value * a + ord(key[i])) % m
+        return hash_value
+```
+
+ChatGPT:
+The choice of a = 37 in your hash function is part of the design of a specific type of hash function known as a polynomial rolling hash function. In this context, a is a constant that is used as a multiplier in the calculation of the hash value for a string. The reason for choosing a particular value like 37 involves a balance of efficiency and distribution.
+
+Here's why a value like 37 is chosen:
+
+1. Prime Number: It's common to choose a prime number in hash functions because it tends to provide a good distribution of hash values for keys. Prime numbers are less likely to produce regular patterns that could lead to clustering in the hash table, which in turn reduces the likelihood of collisions.
